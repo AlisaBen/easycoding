@@ -12,7 +12,16 @@ class Settings(object):
 		self.bullet_height = 15
 		self.bullet_color = (120,120,120)
 		self.bullet_speed_factor = 3
-		self.bullet_allowed = 5
+		self.bullet_allowed = 5  # 最大子弹数
+
+		# 外星人配置
+		self.alien_speed_factor = 1
+		# 撞击屏幕边缘时，向下移动的速度
+		self.fleet_drop_speed = 10
+		# 1--右移  -1--左移
+		self.fleet_direction = 1
+
+		self.ship_limit = 3
 		
 
 		

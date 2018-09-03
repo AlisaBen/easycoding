@@ -5,7 +5,7 @@ class Ship(object):
 		super(Ship, self).__init__()
 		self.game_settings = game_settings
 		self.screen = screen  # screen游戏界面
-		self.image = pygame.image.load('images/外星飞船.png').convert_alpha()  # 加载飞船图像
+		self.image = pygame.image.load('images/飞机.png').convert_alpha()  # 加载飞船图像
 		# 修改图像大小
 		self.width,self.height = self.image.get_size()
 		self.image = pygame.transform.smoothscale(self.image,(self.width//2,self.height//2))
@@ -37,4 +37,7 @@ class Ship(object):
 	def blitme(self):
 		"""在self.rect位置绘制图像"""
 		self.screen.blit(self.image,self.rect)
+
+	def center_ship(self):
+		self.centerx = self.screen_rect.centerx
 
